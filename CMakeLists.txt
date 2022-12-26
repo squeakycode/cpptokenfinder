@@ -21,7 +21,7 @@ endmacro(custom_target_use_highest_warning_level)
 option(CPP_TOKEN_FINDER_BUILD_TESTS "Determines whether to build tests." ON)
 if(CPP_TOKEN_FINDER_BUILD_TESTS)
     message("Building tests.")
-    include(ctest)
+    include(CTest)
     add_subdirectory(test/tokenfinder)
 endif()
 
