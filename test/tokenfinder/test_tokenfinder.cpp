@@ -284,8 +284,8 @@ TEST_CASE("token_finder", "[token_finder]")
 
         char buffer[] = {"a tokenfinder finds tokens"};
 
-        char *token_begin;
-        char *token_end;
+        char *token_begin = nullptr;
+        char *token_end = nullptr;
         int tokenid = 0;
 
         CHECK(tokenfinder.find_token(buffer, token_begin, token_end, tokenid));
@@ -301,8 +301,8 @@ TEST_CASE("token_finder", "[token_finder]")
 
         wchar_t buffer[] = {L"a tokenfinder finds tokens"};
 
-        wchar_t *token_begin;
-        wchar_t *token_end;
+        wchar_t *token_begin = nullptr;
+        wchar_t *token_end = nullptr;
         int tokenid = 0;
 
         CHECK(tokenfinder.find_token(buffer, token_begin, token_end, tokenid));
@@ -318,8 +318,8 @@ TEST_CASE("token_finder", "[token_finder]")
 
         const wchar_t *text = L"a tokenfinder finds tokens";
 
-        const wchar_t *token_begin;
-        const wchar_t *token_end;
+        const wchar_t *token_begin = nullptr;
+        const wchar_t *token_end = nullptr;
         int tokenid = 0;
 
         CHECK(tokenfinder.find_token(text, token_begin, token_end, tokenid));
