@@ -1,4 +1,5 @@
 // cpptokenfinder - A simple C++ token finder implementation
+// Link: https://github.com/squeakycode/cpptokenfinder
 // Version: 1.0.0
 // Minimum required C++ Standard: C++11
 // License: BSD 3-Clause License
@@ -373,7 +374,7 @@ namespace cpptokenfinder
 
             // We start with our root list of entries it contains the possible first characters of all tokens.
             search_tree_entry_list_type* p_current_search_tree_entry_list = &root;
-            // Go through the null terminated string of the token and add it to the search tree
+            // Go through the string of the token and add it to the search tree
             for (text_wrapper_type character_of_token = token_string; !character_of_token.is_end_position(); ++character_of_token)
             {
                 search_tree_entry_list_type* p_next_search_tree_entry_list = nullptr;
@@ -422,7 +423,7 @@ namespace cpptokenfinder
         bool find_token_implementation(text_wrapper_type text, iterator_type& token_begin_out, iterator_type& token_end_out, token_id_type& token_id_out) const
         {
             bool result = false;
-            // Go through the null terminated string and search for matching tokens using the search tree.
+            // Go through the string and search for matching tokens using the search tree.
             for (text_wrapper_type character_text = text; !character_text.is_end_position() && !result; ++character_text)
             {
                 // We start with our root list of entries it contains the possible first characters of all tokens.
