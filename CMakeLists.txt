@@ -25,7 +25,7 @@ if(CPP_TOKEN_FINDER_BUILD_TESTS)
     add_subdirectory(test/tokenfinder)
 endif()
 
-option(CPP_TOKEN_FINDER_GENERATE_DOXYGEN_DOCUMENTATION "API documentation will be generated using Doxygen if on." ON)
+option(CPP_TOKEN_FINDER_GENERATE_DOXYGEN_DOCUMENTATION "API documentation will be generated using Doxygen if on." OFF)
 if(CPP_TOKEN_FINDER_GENERATE_DOXYGEN_DOCUMENTATION)
     message("Generating doxygen documentation.")
     find_package(Doxygen REQUIRED)
